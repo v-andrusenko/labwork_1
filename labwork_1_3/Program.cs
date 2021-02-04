@@ -18,10 +18,12 @@ namespace labwork_1_3
             Average avgdel = delegate (del[] deleg)
             {
                 double sum = 0;
+                double num;
                 for (int i = 0; i < deleg.Length; i++)
                 {
-                    sum += deleg[i]();
-                    Console.WriteLine($"{i} число = ");
+                    num = deleg[i]();
+                    sum += num;
+                    Console.WriteLine($"{i+1} число = {num}");
                 }
                 return sum / deleg.Length;
             };
